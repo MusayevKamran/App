@@ -1,0 +1,9 @@
+C:\Custom Project\App\App.Common\bin\Debug\netcoreapp3.0\App.Common.deps.json
+C:\Custom Project\App\App.Common\bin\Debug\netcoreapp3.0\App.Common.dll
+C:\Custom Project\App\App.Common\bin\Debug\netcoreapp3.0\App.Common.pdb
+C:\Custom Project\App\App.Common\obj\Debug\netcoreapp3.0\App.Common.csproj.CoreCompileInputs.cache
+C:\Custom Project\App\App.Common\obj\Debug\netcoreapp3.0\App.Common.AssemblyInfoInputs.cache
+C:\Custom Project\App\App.Common\obj\Debug\netcoreapp3.0\App.Common.AssemblyInfo.cs
+C:\Custom Project\App\App.Common\obj\Debug\netcoreapp3.0\App.Common.dll
+C:\Custom Project\App\App.Common\obj\Debug\netcoreapp3.0\App.Common.pdb
+C:\Custom Project\App\App.Common\obj\Debug\netcoreapp3.0\App.Common.csprojAssemblyReference.cache

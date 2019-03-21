@@ -1,0 +1,9 @@
+C:\Custom Project\App\App.Domain\obj\Debug\netcoreapp3.0\App.Domain.csproj.CoreCompileInputs.cache
+C:\Custom Project\App\App.Domain\obj\Debug\netcoreapp3.0\App.Domain.AssemblyInfoInputs.cache
+C:\Custom Project\App\App.Domain\obj\Debug\netcoreapp3.0\App.Domain.AssemblyInfo.cs
+C:\Custom Project\App\App.Domain\bin\Debug\netcoreapp3.0\App.Domain.deps.json
+C:\Custom Project\App\App.Domain\bin\Debug\netcoreapp3.0\App.Domain.dll
+C:\Custom Project\App\App.Domain\bin\Debug\netcoreapp3.0\App.Domain.pdb
+C:\Custom Project\App\App.Domain\obj\Debug\netcoreapp3.0\App.Domain.dll
+C:\Custom Project\App\App.Domain\obj\Debug\netcoreapp3.0\App.Domain.pdb
+C:\Custom Project\App\App.Domain\obj\Debug\netcoreapp3.0\App.Domain.csprojAssemblyReference.cache

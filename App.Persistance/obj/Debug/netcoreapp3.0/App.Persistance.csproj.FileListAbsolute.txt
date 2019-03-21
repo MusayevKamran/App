@@ -1,0 +1,14 @@
+C:\Custom Project\App\App.Persistance\bin\Debug\netcoreapp3.0\App.Persistance.deps.json
+C:\Custom Project\App\App.Persistance\bin\Debug\netcoreapp3.0\App.Persistance.dll
+C:\Custom Project\App\App.Persistance\bin\Debug\netcoreapp3.0\App.Persistance.pdb
+C:\Custom Project\App\App.Persistance\obj\Debug\netcoreapp3.0\App.Persistance.csproj.CoreCompileInputs.cache
+C:\Custom Project\App\App.Persistance\obj\Debug\netcoreapp3.0\App.Persistance.AssemblyInfoInputs.cache
+C:\Custom Project\App\App.Persistance\obj\Debug\netcoreapp3.0\App.Persistance.AssemblyInfo.cs
+C:\Custom Project\App\App.Persistance\obj\Debug\netcoreapp3.0\App.Persistance.dll
+C:\Custom Project\App\App.Persistance\obj\Debug\netcoreapp3.0\App.Persistance.pdb
+C:\Custom Project\App\App.Persistance\obj\Debug\netcoreapp3.0\App.Persistance.csprojAssemblyReference.cache
+C:\Custom Project\App\App.Persistance\bin\Debug\netcoreapp3.0\App.Domain.dll
+C:\Custom Project\App\App.Persistance\bin\Debug\netcoreapp3.0\App.Domain.pdb
+C:\Custom Project\App\App.Persistance\obj\Debug\netcoreapp3.0\App.Persistance.csproj.CopyComplete
+C:\Custom Project\App\App.Persistance\bin\Debug\netcoreapp3.0\App.Persistance.runtimeconfig.json
+C:\Custom Project\App\App.Persistance\bin\Debug\netcoreapp3.0\App.Persistance.runtimeconfig.dev.json
