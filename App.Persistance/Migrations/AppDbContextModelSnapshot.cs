@@ -25,25 +25,12 @@ namespace App.Persistance.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Content");
-
-                    b.Property<DateTime>("CreatedDate");
-
-                    b.Property<string>("Image");
-
-                    b.Property<bool>("IsActive");
-
-                    b.Property<string>("Like");
-
-                    b.Property<int>("PostCategory");
-
-                    b.Property<int>("Row");
+                    b.Property<int>("Row")
+                        .HasColumnName("ROW");
 
                     b.Property<string>("Title");
 
                     b.Property<string>("URL");
-
-                    b.Property<DateTime>("UpdateDate");
 
                     b.Property<Guid?>("UserId");
 
@@ -64,7 +51,7 @@ namespace App.Persistance.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("ArticleCategories");
+                    b.ToTable("ArticleCategory");
                 });
 
             modelBuilder.Entity("App.Domain.Entities.ArticleImages", b =>
@@ -98,12 +85,11 @@ namespace App.Persistance.Migrations
                         .IsRequired()
                         .HasMaxLength(15);
 
-                    b.Property<int>("Row")
-                        .HasColumnType("Row");
+                    b.Property<int>("Row");
 
                     b.HasKey("CategoryId");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Category");
                 });
 
             modelBuilder.Entity("App.Domain.Entities.Comment", b =>
@@ -128,7 +114,7 @@ namespace App.Persistance.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Comments");
+                    b.ToTable("Comment");
                 });
 
             modelBuilder.Entity("App.Domain.Entities.Image", b =>
@@ -180,18 +166,16 @@ namespace App.Persistance.Migrations
 
             modelBuilder.Entity("App.Domain.Entities.Article", b =>
                 {
-                    b.HasOne("App.Domain.Entities.User", "User")
+                    b.HasOne("App.Domain.Entities.User")
                         .WithMany("Article")
-                        .HasForeignKey("UserId")
-                        .HasConstraintName("FK_User_Articles");
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("App.Domain.Entities.ArticleCategory", b =>
                 {
                     b.HasOne("App.Domain.Entities.Article", "Article")
-                        .WithMany("ArticleCategory")
+                        .WithMany()
                         .HasForeignKey("ArticleId")
-                        .HasConstraintName("FK_Article_Categories")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("App.Domain.Entities.Category", "Category")
@@ -204,9 +188,8 @@ namespace App.Persistance.Migrations
             modelBuilder.Entity("App.Domain.Entities.ArticleImages", b =>
                 {
                     b.HasOne("App.Domain.Entities.Article", "Article")
-                        .WithMany("Images")
+                        .WithMany()
                         .HasForeignKey("ArticleId")
-                        .HasConstraintName("FK_Article_Images")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("App.Domain.Entities.Image", "Image")
@@ -218,9 +201,8 @@ namespace App.Persistance.Migrations
             modelBuilder.Entity("App.Domain.Entities.Comment", b =>
                 {
                     b.HasOne("App.Domain.Entities.Article", "Article")
-                        .WithMany("Comment")
-                        .HasForeignKey("ArticleId")
-                        .HasConstraintName("FK_Article_Comments");
+                        .WithMany()
+                        .HasForeignKey("ArticleId");
 
                     b.HasOne("App.Domain.Entities.User", "User")
                         .WithMany("Comment")

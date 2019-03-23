@@ -11,10 +11,11 @@ namespace App.Persistance.Configurations
     {
         public void Configure(EntityTypeBuilder<Article> builder)
         {
-            builder.HasMany<Comment>(a => a.Comment)
-                .WithOne(b => b.Article)
-                .HasPrincipalKey(c => c.ArticleId)
-                .HasConstraintName("FK_Article_Comments");
+            builder.Property(e => e.Row).HasColumnName("ROW");
+            //builder.HasMany<Comment>(a => a.Comment)
+            //    .WithOne(b => b.Article)
+            //    .HasPrincipalKey(c => c.ArticleId)
+            //    .HasConstraintName("FK_Article_Comments");
         }
     }
 }

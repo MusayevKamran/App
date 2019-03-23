@@ -5,6 +5,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20190321092049_Initi.cs" />
+    <Compile Remove="Migrations\20190321092049_Initi.Designer.cs" />
+    <Compile Remove="Migrations\20190322103045_Initial.cs" />
+    <Compile Remove="Migrations\20190322103045_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20190322103211_Initial.cs" />
+    <Compile Remove="Migrations\20190322103211_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20190322103357_Initial.cs" />
+    <Compile Remove="Migrations\20190322103357_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20190322103543_Initial.cs" />
+    <Compile Remove="Migrations\20190322103543_Initial.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Infrastructure\" />
   </ItemGroup>
 

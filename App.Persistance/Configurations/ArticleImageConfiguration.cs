@@ -13,10 +13,10 @@ namespace App.Persistance.Configurations
         {
             builder.HasKey(a => new { a.ArticleId, a.ImageId });
 
-            builder.HasOne(a => a.Article)
-                .WithMany(b => b.Images)
-                .HasForeignKey(a => a.ArticleId)
-                .HasConstraintName("FK_Article_Images");
+            //builder.HasOne(a => a.Article)
+            //    .WithMany(b => b.Images)
+            //    .HasForeignKey(a => a.ArticleId)
+            //    .HasConstraintName("FK_Article_Images");
         }
     }
 }

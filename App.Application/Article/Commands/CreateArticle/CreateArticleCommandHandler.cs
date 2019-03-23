@@ -1,0 +1,29 @@
+﻿using App.Persistance.Data;
+using MediatR;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace App.Application.Article.Commands.CreateArticle
+{
+    public class CreateArticleCommandHandler : IRequestHandler<CreateArticleCommand, int>
+    {
+        private readonly AppDbContext _context;
+        public CreateArticleCommandHandler(AppDbContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<int> Handle(CreateArticleCommand request, CancellationToken cancellationToken)
+        {
+            var entity = new Domain.Entities.Article
+            {
+                URL = request.URL,
+                Title = request.Title,
+                Row = request.Row
+            };
+            _context.Articles.Add(entity);
+            await _context.SaveChangesAsync(cancellationToken);
+            return entity.ArticleId;
+        }
+    }
+}
