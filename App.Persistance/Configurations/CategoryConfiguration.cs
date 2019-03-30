@@ -12,9 +12,8 @@ namespace App.Persistance.Configurations
 
             builder.Property(e => e.CategoryId).HasColumnName("CategoryID");
 
-            builder.Property(e => e.Name)
-                .IsRequired()
-                .HasMaxLength(15);
+            builder.Property(e => e.Name).IsRequired().HasMaxLength(15);
+
         }
     }
 }

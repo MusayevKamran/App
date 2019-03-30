@@ -6,4 +6,3 @@ C:\Custom Project\App\App.Common\obj\Debug\netcoreapp3.0\App.Common.AssemblyInfo
 C:\Custom Project\App\App.Common\obj\Debug\netcoreapp3.0\App.Common.AssemblyInfo.cs
 C:\Custom Project\App\App.Common\obj\Debug\netcoreapp3.0\App.Common.dll
 C:\Custom Project\App\App.Common\obj\Debug\netcoreapp3.0\App.Common.pdb
-C:\Custom Project\App\App.Common\obj\Debug\netcoreapp3.0\App.Common.csprojAssemblyReference.cache

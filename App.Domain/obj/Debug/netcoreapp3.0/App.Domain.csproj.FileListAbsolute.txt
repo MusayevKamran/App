@@ -6,4 +6,7 @@ C:\Custom Project\App\App.Domain\bin\Debug\netcoreapp3.0\App.Domain.dll
 C:\Custom Project\App\App.Domain\bin\Debug\netcoreapp3.0\App.Domain.pdb
 C:\Custom Project\App\App.Domain\obj\Debug\netcoreapp3.0\App.Domain.dll
 C:\Custom Project\App\App.Domain\obj\Debug\netcoreapp3.0\App.Domain.pdb
+C:\Custom Project\App\App.Domain\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Custom Project\App\App.Domain\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Identity.Stores.xml
+C:\Custom Project\App\App.Domain\obj\Debug\netcoreapp3.0\App.Domain.csproj.CopyComplete
 C:\Custom Project\App\App.Domain\obj\Debug\netcoreapp3.0\App.Domain.csprojAssemblyReference.cache

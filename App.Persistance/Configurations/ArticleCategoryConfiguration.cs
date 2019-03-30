@@ -13,15 +13,15 @@ namespace App.Persistance.Configurations
         {
             builder.HasKey(a => new { a.ArticleId, a.CategoryId });
 
-            //builder.HasOne(a => a.Article)
-            //    .WithMany(b => b.ArticleCategory)
-            //    .HasForeignKey(a => a.ArticleId)
-            //    .HasConstraintName("FK_Article_Categories");
+            builder .HasOne(a => a.Article)
+                    .WithMany(b => b.ArticleCategory)
+                    .HasForeignKey(a => a.ArticleId)
+                    .HasConstraintName("FK_Article_Categories"); ;
 
             builder.HasOne(a => a.Category)
-                .WithMany(b => b.ArticleCategory)
-                .HasForeignKey(a => a.CategoryId)
-                .HasConstraintName("FK_Category_Articles");
+                   .WithMany(b => b.ArticleCategory)
+                   .HasForeignKey(a => a.CategoryId)
+                   .HasConstraintName("FK_Category_Articles"); ;
         }
     }
 }

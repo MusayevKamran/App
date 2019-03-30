@@ -4,8 +4,9 @@ using App.Domain.Infrastructure;
 
 namespace App.Domain.ValueObjects
 {
-    public class Address : ValueObject // ValueObject
+    public class Address : ValueObject
     {
+        public int Id { get; set; }
         public String Street { get; private set; }
 
         public String City { get; private set; }
@@ -16,9 +17,25 @@ namespace App.Domain.ValueObjects
 
         public String ZipCode { get; private set; }
 
+        private Address() { }
+
+        public Address(string street, string city, string state, string country, string zipcode)
+        {
+            Street = street;
+            City = city;
+            State = state;
+            Country = country;
+            ZipCode = zipcode;
+        }
+
         protected override IEnumerable<object> GetAtomicValues()
         {
-            throw new NotImplementedException();
+            // Using a yield return statement to return each element one at a time
+            yield return Street;
+            yield return City;
+            yield return State;
+            yield return Country;
+            yield return ZipCode;
         }
     }
 }

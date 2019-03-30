@@ -1,6 +1,6 @@
 using System;
 using System.Reflection;
-using App.Application.Article.Queries.GetArticle;
+using App.Application.Articles.Queries.GetArticle;
 using App.Application.Infrastructure;
 using App.Persistance.Data;
 using App.Persistance.Identity;

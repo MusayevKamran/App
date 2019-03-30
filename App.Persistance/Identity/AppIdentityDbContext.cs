@@ -1,11 +1,12 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using App.Domain.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 
 namespace App.Persistance.Identity
 {
-    public class AppIdentityDbContext : IdentityDbContext<AppUser, AppRole, Guid>
+    public class AppIdentityDbContext : IdentityDbContext<User, Role, Guid>
     {
         public AppIdentityDbContext(DbContextOptions<AppIdentityDbContext> options)
             : base(options)

@@ -5,18 +5,17 @@ namespace App.Domain.Entities
 {
     public class Category
     {
+        public Category()
+        {
+            ArticleCategory = new HashSet<ArticleCategory>();
+        }
         public int CategoryId { get; set; }
+        public virtual string Name { get; set; }
+        public virtual int Row { get; set; }
+        public virtual int Count { get; set; }
+        public virtual bool IsNew { get; set; }
+        public virtual bool IsActive { get; set; }
+        public virtual ICollection<ArticleCategory> ArticleCategory { get; set; }
 
-        public string Name { get; set; }
-
-        public int Row { get; set; }
-
-        public int Count { get; set; }
-
-        public bool IsNew { get; set; }
-
-        public bool IsActive { get; set; }
-
-        public List<ArticleCategory> ArticleCategory { get; set; } 
     }
 }

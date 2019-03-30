@@ -7,12 +7,25 @@ namespace App.Domain.ValueObjects
 {
     public class Contact : ValueObject
     {
-        public string Email { get; set; }
-        public string PhoneNumber { get; set; }
+        public int Id { get; set; }
+        public String Street { get; private set; }
+        public String Email { get; private set; }
+        public String PhoneNumber { get; private set; }
+
+        private Contact() { }
+
+        public Contact(string email, string phoneNumber)
+        {
+            Email = email;
+            PhoneNumber = phoneNumber;
+
+        }
 
         protected override IEnumerable<object> GetAtomicValues()
         {
-            throw new NotImplementedException();
+            // Using a yield return statement to return each element one at a time
+            yield return Email;
+            yield return PhoneNumber;
         }
     }
 }

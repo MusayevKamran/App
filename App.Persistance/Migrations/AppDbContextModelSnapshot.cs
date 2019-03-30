@@ -25,12 +25,23 @@ namespace App.Persistance.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Row")
-                        .HasColumnName("ROW");
+                    b.Property<string>("Content");
+
+                    b.Property<DateTime>("CreatedDate");
+
+                    b.Property<bool>("IsActive");
+
+                    b.Property<string>("Like");
+
+                    b.Property<int>("PostCategory");
+
+                    b.Property<int>("Row");
 
                     b.Property<string>("Title");
 
                     b.Property<string>("URL");
+
+                    b.Property<DateTime>("UpdateDate");
 
                     b.Property<Guid?>("UserId");
 
@@ -52,20 +63,6 @@ namespace App.Persistance.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("ArticleCategory");
-                });
-
-            modelBuilder.Entity("App.Domain.Entities.ArticleImages", b =>
-                {
-                    b.Property<int>("ArticleId");
-
-                    b.Property<int>("ImageId");
-
-                    b.HasKey("ArticleId", "ImageId");
-
-                    b.HasIndex("ImageId")
-                        .IsUnique();
-
-                    b.ToTable("ArticleImages");
                 });
 
             modelBuilder.Entity("App.Domain.Entities.Category", b =>
@@ -102,8 +99,6 @@ namespace App.Persistance.Migrations
 
                     b.Property<string>("Content");
 
-                    b.Property<int>("Count");
-
                     b.Property<DateTime>("CreatedDate");
 
                     b.Property<Guid?>("UserId");
@@ -123,23 +118,35 @@ namespace App.Persistance.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int?>("ArticleId");
+
                     b.Property<string>("ImageLink");
 
                     b.HasKey("ImageId");
+
+                    b.HasIndex("ArticleId");
 
                     b.ToTable("Image");
                 });
 
             modelBuilder.Entity("App.Domain.Entities.User", b =>
                 {
-                    b.Property<Guid>("UserId")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("About");
+                    b.Property<int>("AccessFailedCount");
+
+                    b.Property<int?>("AddressId");
+
+                    b.Property<string>("ConcurrencyStamp");
+
+                    b.Property<int?>("ContactId");
 
                     b.Property<string>("Education");
 
                     b.Property<string>("Email");
+
+                    b.Property<bool>("EmailConfirmed");
 
                     b.Property<string>("FirstName");
 
@@ -151,31 +158,98 @@ namespace App.Persistance.Migrations
 
                     b.Property<int>("Like");
 
+                    b.Property<bool>("LockoutEnabled");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd");
+
+                    b.Property<string>("NormalizedEmail");
+
+                    b.Property<string>("NormalizedUserName");
+
+                    b.Property<string>("PasswordHash");
+
+                    b.Property<string>("PhoneNumber");
+
+                    b.Property<bool>("PhoneNumberConfirmed");
+
                     b.Property<string>("Quote");
 
                     b.Property<string>("SecondName");
 
+                    b.Property<string>("SecurityStamp");
+
+                    b.Property<bool>("TwoFactorEnabled");
+
                     b.Property<string>("URL");
+
+                    b.Property<Guid>("UserId");
+
+                    b.Property<string>("UserName");
 
                     b.Property<int>("View");
 
-                    b.HasKey("UserId");
+                    b.HasKey("Id");
+
+                    b.HasIndex("AddressId");
+
+                    b.HasIndex("ContactId");
 
                     b.ToTable("User");
                 });
 
+            modelBuilder.Entity("App.Domain.ValueObjects.Address", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("City");
+
+                    b.Property<string>("Country");
+
+                    b.Property<string>("State");
+
+                    b.Property<string>("Street");
+
+                    b.Property<string>("ZipCode");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Address");
+                });
+
+            modelBuilder.Entity("App.Domain.ValueObjects.Contact", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Email");
+
+                    b.Property<string>("PhoneNumber");
+
+                    b.Property<string>("Street");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Contact");
+                });
+
             modelBuilder.Entity("App.Domain.Entities.Article", b =>
                 {
-                    b.HasOne("App.Domain.Entities.User")
-                        .WithMany("Article")
-                        .HasForeignKey("UserId");
+                    b.HasOne("App.Domain.Entities.User", "User")
+                        .WithMany("Articles")
+                        .HasForeignKey("UserId")
+                        .HasConstraintName("FK_User_Articles")
+                        .HasPrincipalKey("UserId");
                 });
 
             modelBuilder.Entity("App.Domain.Entities.ArticleCategory", b =>
                 {
                     b.HasOne("App.Domain.Entities.Article", "Article")
-                        .WithMany()
+                        .WithMany("ArticleCategory")
                         .HasForeignKey("ArticleId")
+                        .HasConstraintName("FK_Article_Categories")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("App.Domain.Entities.Category", "Category")
@@ -185,29 +259,37 @@ namespace App.Persistance.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("App.Domain.Entities.ArticleImages", b =>
-                {
-                    b.HasOne("App.Domain.Entities.Article", "Article")
-                        .WithMany()
-                        .HasForeignKey("ArticleId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("App.Domain.Entities.Image", "Image")
-                        .WithOne("ArticleImages")
-                        .HasForeignKey("App.Domain.Entities.ArticleImages", "ImageId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
             modelBuilder.Entity("App.Domain.Entities.Comment", b =>
                 {
                     b.HasOne("App.Domain.Entities.Article", "Article")
-                        .WithMany()
-                        .HasForeignKey("ArticleId");
+                        .WithMany("Comments")
+                        .HasForeignKey("ArticleId")
+                        .HasConstraintName("FK_Article_Comments");
 
                     b.HasOne("App.Domain.Entities.User", "User")
-                        .WithMany("Comment")
+                        .WithMany("Comments")
                         .HasForeignKey("UserId")
-                        .HasConstraintName("FK_User_Comments");
+                        .HasConstraintName("FK_User_Comments")
+                        .HasPrincipalKey("UserId");
+                });
+
+            modelBuilder.Entity("App.Domain.Entities.Image", b =>
+                {
+                    b.HasOne("App.Domain.Entities.Article", "Article")
+                        .WithMany("Images")
+                        .HasForeignKey("ArticleId")
+                        .HasConstraintName("FK_Images_Article");
+                });
+
+            modelBuilder.Entity("App.Domain.Entities.User", b =>
+                {
+                    b.HasOne("App.Domain.ValueObjects.Address", "Address")
+                        .WithMany()
+                        .HasForeignKey("AddressId");
+
+                    b.HasOne("App.Domain.ValueObjects.Contact", "Contact")
+                        .WithMany()
+                        .HasForeignKey("ContactId");
                 });
 #pragma warning restore 612, 618
         }
