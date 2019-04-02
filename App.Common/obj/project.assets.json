@@ -555,11 +555,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Custom Project\\App\\App.Common\\App.Common.csproj",
+      "projectUniqueName": "D:\\Custom Project\\App\\App.Common\\App.Common.csproj",
       "projectName": "App.Common",
-      "projectPath": "C:\\Custom Project\\App\\App.Common\\App.Common.csproj",
+      "projectPath": "D:\\Custom Project\\App\\App.Common\\App.Common.csproj",
       "packagesPath": "C:\\Users\\kamra\\.nuget\\packages\\",
-      "outputPath": "C:\\Custom Project\\App\\App.Common\\obj\\",
+      "outputPath": "D:\\Custom Project\\App\\App.Common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\ProgramData\\Xamarin\\NuGet\\",

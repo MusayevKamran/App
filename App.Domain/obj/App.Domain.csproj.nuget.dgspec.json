@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Custom Project\\App\\App.Domain\\App.Domain.csproj": {}
+    "D:\\Custom Project\\App\\App.Domain\\App.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Custom Project\\App\\App.Domain\\App.Domain.csproj": {
+    "D:\\Custom Project\\App\\App.Domain\\App.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Custom Project\\App\\App.Domain\\App.Domain.csproj",
+        "projectUniqueName": "D:\\Custom Project\\App\\App.Domain\\App.Domain.csproj",
         "projectName": "App.Domain",
-        "projectPath": "C:\\Custom Project\\App\\App.Domain\\App.Domain.csproj",
+        "projectPath": "D:\\Custom Project\\App\\App.Domain\\App.Domain.csproj",
         "packagesPath": "C:\\Users\\kamra\\.nuget\\packages\\",
-        "outputPath": "C:\\Custom Project\\App\\App.Domain\\obj\\",
+        "outputPath": "D:\\Custom Project\\App\\App.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\ProgramData\\Xamarin\\NuGet\\",
@@ -47,6 +47,10 @@
         "netcoreapp3.0": {
           "dependencies": {
             "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Identity.Stores": {
               "target": "Package",
               "version": "[2.2.0, )"
             },

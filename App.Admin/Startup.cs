@@ -1,20 +1,18 @@
 using System;
-using System.Reflection;
-using App.Application.Articles.Queries.GetArticle;
-using App.Application.Infrastructure;
-using App.Persistance.Data;
-using App.Persistance.Identity;
-using MediatR;
-using MediatR.Pipeline;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using App.Admin.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using AutoMapper;
-using App.Application.Infrastructure.AutoMapper;
-using Microsoft.AspNetCore.Mvc;
 
 namespace App.Admin
 {
@@ -30,38 +28,22 @@ namespace App.Admin
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddAutoMapper(new Assembly[] { typeof(AutoMapperProfile).GetTypeInfo().Assembly });
-
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-            
 
-            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestPreProcessorBehavior<,>));
-            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestPerformanceBehaviour<,>));
-            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestValidationBehavior<,>));
-
-            services.AddMediatR(typeof(GetArticleQueryHandler).GetTypeInfo().Assembly);
-
-            services.AddDbContext<AppDbContext>(options =>
-                     options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
-            services.Configure<ApiBehaviorOptions>(options =>
-            {
-                options.SuppressModelStateInvalidFilter = true;
-            });
-
-            //// Add Identity DbContext
-            //services.AddDbContext<AppIdentityDbContext>(options =>
-            //    options.UseSqlServer(Configuration.GetConnectionString("IdentityConnection")));
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDefaultIdentity<IdentityUser>()
+                .AddDefaultUI(UIFramework.Bootstrap4)
+                .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddMvc()
                 .AddNewtonsoftJson();
-
-            services.AddSwaggerDocument();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -70,6 +52,7 @@ namespace App.Admin
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseDatabaseErrorPage();
             }
             else
             {
@@ -81,9 +64,6 @@ namespace App.Admin
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
-            app.UseSwagger();
-            app.UseSwaggerUi3();
-
             app.UseRouting(routes =>
             {
                 routes.MapApplication();
@@ -94,6 +74,7 @@ namespace App.Admin
 
             app.UseCookiePolicy();
 
+            app.UseAuthentication();
             app.UseAuthorization();
         }
     }

@@ -6,3 +6,11 @@ C:\Custom Project\App\App.Common\obj\Debug\netcoreapp3.0\App.Common.AssemblyInfo
 C:\Custom Project\App\App.Common\obj\Debug\netcoreapp3.0\App.Common.AssemblyInfo.cs
 C:\Custom Project\App\App.Common\obj\Debug\netcoreapp3.0\App.Common.dll
 C:\Custom Project\App\App.Common\obj\Debug\netcoreapp3.0\App.Common.pdb
+D:\Custom Project\App\App.Common\bin\Debug\netcoreapp3.0\App.Common.deps.json
+D:\Custom Project\App\App.Common\bin\Debug\netcoreapp3.0\App.Common.dll
+D:\Custom Project\App\App.Common\bin\Debug\netcoreapp3.0\App.Common.pdb
+D:\Custom Project\App\App.Common\obj\Debug\netcoreapp3.0\App.Common.csproj.CoreCompileInputs.cache
+D:\Custom Project\App\App.Common\obj\Debug\netcoreapp3.0\App.Common.AssemblyInfoInputs.cache
+D:\Custom Project\App\App.Common\obj\Debug\netcoreapp3.0\App.Common.AssemblyInfo.cs
+D:\Custom Project\App\App.Common\obj\Debug\netcoreapp3.0\App.Common.dll
+D:\Custom Project\App\App.Common\obj\Debug\netcoreapp3.0\App.Common.pdb

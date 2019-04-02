@@ -7,7 +7,6 @@ namespace App.Domain.ValueObjects
 {
     public class Contact : ValueObject
     {
-        public int Id { get; set; }
         public String Street { get; private set; }
         public String Email { get; private set; }
         public String PhoneNumber { get; private set; }

@@ -12,3 +12,17 @@ C:\Custom Project\App\App.Application\bin\Debug\netcoreapp3.0\App.Persistance.dl
 C:\Custom Project\App\App.Application\bin\Debug\netcoreapp3.0\App.Domain.pdb
 C:\Custom Project\App\App.Application\bin\Debug\netcoreapp3.0\App.Persistance.pdb
 C:\Custom Project\App\App.Application\obj\Debug\netcoreapp3.0\App.Application.csproj.CopyComplete
+D:\Custom Project\App\App.Application\bin\Debug\netcoreapp3.0\App.Application.deps.json
+D:\Custom Project\App\App.Application\bin\Debug\netcoreapp3.0\App.Application.dll
+D:\Custom Project\App\App.Application\bin\Debug\netcoreapp3.0\App.Application.pdb
+D:\Custom Project\App\App.Application\bin\Debug\netcoreapp3.0\App.Domain.dll
+D:\Custom Project\App\App.Application\bin\Debug\netcoreapp3.0\App.Persistance.dll
+D:\Custom Project\App\App.Application\bin\Debug\netcoreapp3.0\App.Domain.pdb
+D:\Custom Project\App\App.Application\bin\Debug\netcoreapp3.0\App.Persistance.pdb
+D:\Custom Project\App\App.Application\obj\Debug\netcoreapp3.0\App.Application.csprojAssemblyReference.cache
+D:\Custom Project\App\App.Application\obj\Debug\netcoreapp3.0\App.Application.csproj.CoreCompileInputs.cache
+D:\Custom Project\App\App.Application\obj\Debug\netcoreapp3.0\App.Application.AssemblyInfoInputs.cache
+D:\Custom Project\App\App.Application\obj\Debug\netcoreapp3.0\App.Application.AssemblyInfo.cs
+D:\Custom Project\App\App.Application\obj\Debug\netcoreapp3.0\App.Application.csproj.CopyComplete
+D:\Custom Project\App\App.Application\obj\Debug\netcoreapp3.0\App.Application.dll
+D:\Custom Project\App\App.Application\obj\Debug\netcoreapp3.0\App.Application.pdb

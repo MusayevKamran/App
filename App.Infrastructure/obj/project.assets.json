@@ -1260,6 +1260,7 @@
         "framework": ".NETCoreApp,Version=v3.0",
         "dependencies": {
           "Microsoft.AspNetCore.Identity": "2.2.0",
+          "Microsoft.Extensions.Identity.Stores": "2.2.0",
           "Microsoft.NETCore.Platforms": "3.0.0-preview.19073.11"
         },
         "compile": {
@@ -4543,11 +4544,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Custom Project\\App\\App.Infrastructure\\App.Infrastructure.csproj",
+      "projectUniqueName": "D:\\Custom Project\\App\\App.Infrastructure\\App.Infrastructure.csproj",
       "projectName": "App.Infrastructure",
-      "projectPath": "C:\\Custom Project\\App\\App.Infrastructure\\App.Infrastructure.csproj",
+      "projectPath": "D:\\Custom Project\\App\\App.Infrastructure\\App.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\kamra\\.nuget\\packages\\",
-      "outputPath": "C:\\Custom Project\\App\\App.Infrastructure\\obj\\",
+      "outputPath": "D:\\Custom Project\\App\\App.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\ProgramData\\Xamarin\\NuGet\\",
@@ -4571,11 +4572,11 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Custom Project\\App\\App.Application\\App.Application.csproj": {
-              "projectPath": "C:\\Custom Project\\App\\App.Application\\App.Application.csproj"
+            "D:\\Custom Project\\App\\App.Application\\App.Application.csproj": {
+              "projectPath": "D:\\Custom Project\\App\\App.Application\\App.Application.csproj"
             },
-            "C:\\Custom Project\\App\\App.Common\\App.Common.csproj": {
-              "projectPath": "C:\\Custom Project\\App\\App.Common\\App.Common.csproj"
+            "D:\\Custom Project\\App\\App.Common\\App.Common.csproj": {
+              "projectPath": "D:\\Custom Project\\App\\App.Common\\App.Common.csproj"
             }
           }
         }

@@ -10,3 +10,12 @@ C:\Custom Project\App\App.Domain\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Id
 C:\Custom Project\App\App.Domain\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Identity.Stores.xml
 C:\Custom Project\App\App.Domain\obj\Debug\netcoreapp3.0\App.Domain.csproj.CopyComplete
 C:\Custom Project\App\App.Domain\obj\Debug\netcoreapp3.0\App.Domain.csprojAssemblyReference.cache
+D:\Custom Project\App\App.Domain\obj\Debug\netcoreapp3.0\App.Domain.csproj.CoreCompileInputs.cache
+D:\Custom Project\App\App.Domain\obj\Debug\netcoreapp3.0\App.Domain.AssemblyInfoInputs.cache
+D:\Custom Project\App\App.Domain\obj\Debug\netcoreapp3.0\App.Domain.AssemblyInfo.cs
+D:\Custom Project\App\App.Domain\obj\Debug\netcoreapp3.0\App.Domain.dll
+D:\Custom Project\App\App.Domain\obj\Debug\netcoreapp3.0\App.Domain.pdb
+D:\Custom Project\App\App.Domain\bin\Debug\netcoreapp3.0\App.Domain.deps.json
+D:\Custom Project\App\App.Domain\bin\Debug\netcoreapp3.0\App.Domain.dll
+D:\Custom Project\App\App.Domain\bin\Debug\netcoreapp3.0\App.Domain.pdb
+D:\Custom Project\App\App.Domain\obj\Debug\netcoreapp3.0\App.Domain.csprojAssemblyReference.cache

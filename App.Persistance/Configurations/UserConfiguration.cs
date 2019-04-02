@@ -11,6 +11,9 @@ namespace App.Persistance.Configurations
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
+            builder.OwnsOne(u => u.Contact);
+            builder.OwnsOne(u => u.Address);
+
             builder.HasMany(a => a.Articles)
                .WithOne(b => b.User)
                .HasPrincipalKey(c => c.UserId)

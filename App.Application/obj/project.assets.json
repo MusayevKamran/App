@@ -1229,6 +1229,7 @@
         "framework": ".NETCoreApp,Version=v3.0",
         "dependencies": {
           "Microsoft.AspNetCore.Identity": "2.2.0",
+          "Microsoft.Extensions.Identity.Stores": "2.2.0",
           "Microsoft.NETCore.Platforms": "3.0.0-preview.19073.11"
         },
         "compile": {
@@ -4505,11 +4506,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Custom Project\\App\\App.Application\\App.Application.csproj",
+      "projectUniqueName": "D:\\Custom Project\\App\\App.Application\\App.Application.csproj",
       "projectName": "App.Application",
-      "projectPath": "C:\\Custom Project\\App\\App.Application\\App.Application.csproj",
+      "projectPath": "D:\\Custom Project\\App\\App.Application\\App.Application.csproj",
       "packagesPath": "C:\\Users\\kamra\\.nuget\\packages\\",
-      "outputPath": "C:\\Custom Project\\App\\App.Application\\obj\\",
+      "outputPath": "D:\\Custom Project\\App\\App.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\ProgramData\\Xamarin\\NuGet\\",
@@ -4533,11 +4534,11 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Custom Project\\App\\App.Domain\\App.Domain.csproj": {
-              "projectPath": "C:\\Custom Project\\App\\App.Domain\\App.Domain.csproj"
+            "D:\\Custom Project\\App\\App.Domain\\App.Domain.csproj": {
+              "projectPath": "D:\\Custom Project\\App\\App.Domain\\App.Domain.csproj"
             },
-            "C:\\Custom Project\\App\\App.Persistance\\App.Persistance.csproj": {
-              "projectPath": "C:\\Custom Project\\App\\App.Persistance\\App.Persistance.csproj"
+            "D:\\Custom Project\\App\\App.Persistance\\App.Persistance.csproj": {
+              "projectPath": "D:\\Custom Project\\App\\App.Persistance\\App.Persistance.csproj"
             }
           }
         }
