@@ -11,7 +11,7 @@ namespace App.Persistance.Data
         public AppDbContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-            optionsBuilder.UseSqlServer("Server=DESKTOP-CL2N2JD\\SQLEXPRESS;Database=App;Trusted_Connection=True;MultipleActiveResultSets=true");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-8O9C6MI;Database=App;Trusted_Connection=True;MultipleActiveResultSets=true");
 
             return new AppDbContext(optionsBuilder.Options);
         }

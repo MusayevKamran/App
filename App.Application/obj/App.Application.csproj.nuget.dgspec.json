@@ -1,45 +1,38 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Custom Project\\App\\App.Application\\App.Application.csproj": {}
+    "C:\\Projects\\App\\App.Application\\App.Application.csproj": {}
   },
   "projects": {
-    "D:\\Custom Project\\App\\App.Application\\App.Application.csproj": {
+    "C:\\Projects\\App\\App.Application\\App.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Custom Project\\App\\App.Application\\App.Application.csproj",
+        "projectUniqueName": "C:\\Projects\\App\\App.Application\\App.Application.csproj",
         "projectName": "App.Application",
-        "projectPath": "D:\\Custom Project\\App\\App.Application\\App.Application.csproj",
-        "packagesPath": "C:\\Users\\kamra\\.nuget\\packages\\",
-        "outputPath": "D:\\Custom Project\\App\\App.Application\\obj\\",
+        "projectPath": "C:\\Projects\\App\\App.Application\\App.Application.csproj",
+        "packagesPath": "C:\\Users\\ITGAz.Dev.Kamran\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\App\\App.Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\ProgramData\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\kamra\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\ITGAz.Dev.Kamran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.0"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.0": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Custom Project\\App\\App.Domain\\App.Domain.csproj": {
-                "projectPath": "D:\\Custom Project\\App\\App.Domain\\App.Domain.csproj"
+              "C:\\Projects\\App\\App.Domain\\App.Domain.csproj": {
+                "projectPath": "C:\\Projects\\App\\App.Domain\\App.Domain.csproj"
               },
-              "D:\\Custom Project\\App\\App.Persistance\\App.Persistance.csproj": {
-                "projectPath": "D:\\Custom Project\\App\\App.Persistance\\App.Persistance.csproj"
+              "C:\\Projects\\App\\App.Persistance\\App.Persistance.csproj": {
+                "projectPath": "C:\\Projects\\App\\App.Persistance\\App.Persistance.csproj"
               }
             }
           }
@@ -51,7 +44,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.0": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
@@ -64,58 +58,50 @@
             "MediatR": {
               "target": "Package",
               "version": "[6.0.0, )"
-            },
-            "Microsoft.NETCore.App": {
-              "include": "None",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.0.0-preview-27324-5, )",
-              "autoReferenced": true
-            },
-            "Microsoft.NETCore.Platforms": {
-              "target": "Package",
-              "version": "[3.0.0-preview.19073.11, )",
-              "autoReferenced": true
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Custom Project\\App\\App.Domain\\App.Domain.csproj": {
+    "C:\\Projects\\App\\App.Domain\\App.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Custom Project\\App\\App.Domain\\App.Domain.csproj",
+        "projectUniqueName": "C:\\Projects\\App\\App.Domain\\App.Domain.csproj",
         "projectName": "App.Domain",
-        "projectPath": "D:\\Custom Project\\App\\App.Domain\\App.Domain.csproj",
-        "packagesPath": "C:\\Users\\kamra\\.nuget\\packages\\",
-        "outputPath": "D:\\Custom Project\\App\\App.Domain\\obj\\",
+        "projectPath": "C:\\Projects\\App\\App.Domain\\App.Domain.csproj",
+        "packagesPath": "C:\\Users\\ITGAz.Dev.Kamran\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\App\\App.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\ProgramData\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\kamra\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\ITGAz.Dev.Kamran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.0"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.0": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -126,7 +112,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.0": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
@@ -134,62 +121,54 @@
             },
             "Microsoft.Extensions.Identity.Stores": {
               "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Microsoft.NETCore.App": {
-              "include": "None",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.0.0-preview-27324-5, )",
-              "autoReferenced": true
-            },
-            "Microsoft.NETCore.Platforms": {
-              "target": "Package",
-              "version": "[3.0.0-preview.19073.11, )",
-              "autoReferenced": true
+              "version": "[3.1.0, )"
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Custom Project\\App\\App.Persistance\\App.Persistance.csproj": {
+    "C:\\Projects\\App\\App.Persistance\\App.Persistance.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Custom Project\\App\\App.Persistance\\App.Persistance.csproj",
+        "projectUniqueName": "C:\\Projects\\App\\App.Persistance\\App.Persistance.csproj",
         "projectName": "App.Persistance",
-        "projectPath": "D:\\Custom Project\\App\\App.Persistance\\App.Persistance.csproj",
-        "packagesPath": "C:\\Users\\kamra\\.nuget\\packages\\",
-        "outputPath": "D:\\Custom Project\\App\\App.Persistance\\obj\\",
+        "projectPath": "C:\\Projects\\App\\App.Persistance\\App.Persistance.csproj",
+        "packagesPath": "C:\\Users\\ITGAz.Dev.Kamran\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\App\\App.Persistance\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\ProgramData\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\kamra\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\ITGAz.Dev.Kamran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.0"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.0": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Custom Project\\App\\App.Domain\\App.Domain.csproj": {
-                "projectPath": "D:\\Custom Project\\App\\App.Domain\\App.Domain.csproj"
+              "C:\\Projects\\App\\App.Domain\\App.Domain.csproj": {
+                "projectPath": "C:\\Projects\\App\\App.Domain\\App.Domain.csproj"
               }
             }
           }
@@ -201,7 +180,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.0": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
@@ -209,40 +189,41 @@
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[3.1.0, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[2.2.3, )"
+              "version": "[3.1.0, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[2.2.3, )"
+              "version": "[3.1.0, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.2.3, )"
-            },
-            "Microsoft.NETCore.App": {
-              "include": "None",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.0.0-preview-27324-5, )",
-              "autoReferenced": true
-            },
-            "Microsoft.NETCore.Platforms": {
-              "target": "Package",
-              "version": "[3.0.0-preview.19073.11, )",
-              "autoReferenced": true
+              "version": "[3.1.0, )"
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

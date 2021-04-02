@@ -37,9 +37,11 @@ namespace App.Admin
 
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
+                    Configuration.GetConnectionString("DefaultConnection"))
+                );
+
             services.AddDefaultIdentity<IdentityUser>()
-                .AddDefaultUI(UIFramework.Bootstrap4)
+                .AddDefaultUI()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddMvc()
@@ -62,20 +64,25 @@ namespace App.Admin
             }
 
             app.UseHttpsRedirection();
+
             app.UseStaticFiles();
 
-            app.UseRouting(routes =>
-            {
-                routes.MapApplication();
-                routes.MapControllerRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-            });
+            app.UseRouting();
 
             app.UseCookiePolicy();
 
             app.UseAuthentication();
+
             app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                endpoints.MapRazorPages();
+            });
         }
     }
 }

@@ -84,17 +84,18 @@ namespace App.API
             app.UseSwagger();
             app.UseSwaggerUi3();
 
-            app.UseRouting(routes =>
-            {
-                routes.MapApplication();
-                routes.MapControllerRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-            });
-
+            app.UseRouting();
+            
             app.UseCookiePolicy();
 
             app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
+            });
         }
     }
 }
